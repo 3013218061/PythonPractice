@@ -13,7 +13,6 @@ if __name__ == "__main__":
 
 	encoder = Encoder()
 	decoder = Decoder()
-	
 	print(encoder.encode("abcde"))
 	print(decoder.decode("edcba"))
 	
