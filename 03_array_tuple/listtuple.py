@@ -59,7 +59,7 @@ if __name__ == "__main__":
     print(tup.__sizeof__()) #24
     
     l = []
-    print(l.__sizeof__()) #20
+    print(l.__sizeof__()) #20_coroutine
     l.append(1)
     print(l.__sizeof__()) #36
     l.append(2)

@@ -10,8 +10,7 @@ def run():
 	context = zmq.Context()
 	socket = context.socket(zmq.PUB)
 	socket.bind("tcp://*:6666")
-	socket.setsockopt_string(zmq.SUBSCRIBE, '')
-	
+
 	cnt = 1
 	
 	while True:

@@ -9,7 +9,7 @@ import time
 
 def crawler():
 	url = "https://movie.douban.com/cinema/later/beijing/"
-	init_page = requests.get(url).content
+	init_page = requests.get(url, headers={'User-Agent':'test'}).content
 	init_soup = BeautifulSoup(init_page, "lxml")
 	
 	all_movies = init_soup.find("div", id = "showing-soon")
@@ -21,7 +21,7 @@ def crawler():
 		url_to_fetch = all_a_tag[1]['href']
 		movie_date = all_li_tag[0].text
 		
-		response_item = requests.get(url_to_fetch).content
+		response_item = requests.get(url_to_fetch, headers={'User-Agent':'test'}).content
 		soup_item = BeautifulSoup(response_item, "lxml")
 		img_tag = soup_item.find("img")
 		

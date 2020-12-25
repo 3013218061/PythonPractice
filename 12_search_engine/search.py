@@ -186,12 +186,12 @@ class BOWInvertedIndexEngineWithCache(BOWInvertedIndexEngine, LRUCache):
 
 
 if __name__ == "__main__":
-	# search_engine = SimpleEngine()
-	# main(search_engine)
-	# search_engine = BOWEngine()
-	# main(search_engine)
-	# search_engine = BOWInvertedIndexEngine()
-	# main(search_engine)
+	search_engine = SimpleEngine()
+	main(search_engine)
+	search_engine = BOWEngine()
+	main(search_engine)
+	search_engine = BOWInvertedIndexEngine()
+	main(search_engine)
 	search_engine = BOWInvertedIndexEngineWithCache()
 	main(search_engine)
 	
